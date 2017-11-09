@@ -23,7 +23,7 @@ public class CityController {
 
     @RequestMapping(value = "/api/city", method = RequestMethod.POST)
     public Long createCity(@RequestBody City city) {
-        LOG.info("ADD City: " + city);
+        LOG.info("ADD City: " + city.getCityname());
         return cityService.saveCity(city);
     }
 
