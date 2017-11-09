@@ -49,6 +49,7 @@ public class CityServiceImpl implements CityService {
                 .add(QueryBuilders.boolQuery().should(QueryBuilders.matchQuery("description", searchContent)),
                         ScoreFunctionBuilders.weightFactorFunction(100));
 
+        // functionScoreQueryBuilder.setMinScore(200);
         // 创建搜索 DSL 查询
         SearchQuery searchQuery = new NativeSearchQueryBuilder().withPageable(pageable).withQuery(functionScoreQueryBuilder).build();
 
