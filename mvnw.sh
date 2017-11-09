@@ -34,6 +34,12 @@
 #   MAVEN_SKIP_RC - flag to disable loading of mavenrc files
 # ----------------------------------------------------------------------------
 
+JAVA_HOME=/usr/java/jdk1.8.0_60/
+export JAVA_HOME
+
+M3_HOME=/global/sww/apache-maven-3.0.3/
+export M3_HOME
+
 if [ -z "$MAVEN_SKIP_RC" ] ; then
 
   if [ -f /etc/mavenrc ] ; then
